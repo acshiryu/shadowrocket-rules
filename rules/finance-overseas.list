@@ -1,9 +1,20 @@
 # Overseas financial apps - explicitly routed through PROXY.
-# Keep this list limited to confirmed first-party service domains.
-# Ethena
+# Curated from official service documentation and publicly maintained app rule lists.
+# Avoid blanket-routing shared analytics, wallet SDKs, KYC vendors or RPC providers:
+# those domains may be used by unrelated apps and require device-log confirmation.
+
+# Ethena: app and first-party API are subdomains of ethena.fi.
+# Official API docs identify public.api.ethena.fi.
 DOMAIN-SUFFIX,ethena.fi
-# Plasma / Plasma One
+
+# Plasma / Plasma One:
+# official site + publicly documented app/service domains.
 DOMAIN-SUFFIX,plasma.org
-DOMAIN-SUFFIX,plasma.network
-# ether.fi
+DOMAIN-SUFFIX,plasma.to
+DOMAIN-SUFFIX,plasma-one.tech
+DOMAIN-SUFFIX,plasmascan.to
+
+# ether.fi: first-party website/app and known app link/documentation hosts.
 DOMAIN-SUFFIX,ether.fi
+DOMAIN-SUFFIX,etherfi.gitbook.io
+DOMAIN-SUFFIX,etherfi.onelink.me
