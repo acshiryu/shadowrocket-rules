@@ -15,8 +15,10 @@ Shadowrocket：配置 → 右上角 + → 粘贴 URL → 下载 → 选中配置
 1. 本地及私有网段直连
 2. `rules/direct.list`：指定国内银行、政务直连
 3. `rules/ai.list`：常用 AI 服务代理
-4. `rules/proxy.list`：指定海外服务代理
-5. 继承的 Johnshall `lazy.conf`：更多国内外、Apple、流媒体等分流及最终兜底
+4. `rules/apple.list`：Apple 核心服务默认直连
+5. `rules/microsoft.list`：Microsoft 系统、办公和账户服务默认直连（Copilot 等 AI 域名优先代理）
+6. `rules/proxy.list`：指定海外服务代理
+7. 继承的 Johnshall `lazy.conf`：更多国内外、Apple、流媒体等分流及最终兜底
 
 Shadowrocket 官方说明：当前配置优先级高于 `include` 的配置。个人规则中**没有额外 FINAL**，以便继续使用上游兜底。
 
@@ -24,9 +26,15 @@ Shadowrocket 官方说明：当前配置优先级高于 `include` 的配置。�
 
 - `shadowrocket.conf`：主入口，继承上游并添加覆盖规则
 - `rules/direct.list`：国内金融/政务直连例外
-- `rules/ai.list`：AI 代理例外
+- `rules/ai.list`：AI 代理例外（包括 Microsoft Copilot）
+- `rules/apple.list`：Apple 服务独立直连规则
+- `rules/microsoft.list`：Microsoft 服务独立直连规则
 - `rules/proxy.list`：部分海外站点代理例外
 - `rules/reject.list`：可选个人广告拦截，**默认不启用**
+
+## Apple / Microsoft 策略
+
+Apple 和 Microsoft 均使用独立域名规则集，默认 DIRECT；Microsoft Copilot 等明确列出的 AI 域名先由 `rules/ai.list` 代理。没有强制把所有 Microsoft Azure、GitHub 或第三方 CDN 纳入直连，未命中部分由上游分流。此处是域名级规则，不保证覆盖每个 App 的全部请求；请在客户端按实际请求测试。
 
 ## 重要提醒
 
