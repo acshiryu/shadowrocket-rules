@@ -1,20 +1,17 @@
-# Direct routing: Chinese services and banks
-DOMAIN-SUFFIX,gov.cn
-DOMAIN-SUFFIX,edu.cn
+# Personal DIRECT overrides; add only domains intentionally forced to direct.
+# China banking and brokerage official domains. Their third-party endpoints
+# are not automatically covered; test actual app traffic before extending.
 DOMAIN-SUFFIX,icbc.com.cn
 DOMAIN-SUFFIX,abchina.com
+DOMAIN-SUFFIX,abchina.com.cn
 DOMAIN-SUFFIX,boc.cn
 DOMAIN-SUFFIX,ccb.com
+DOMAIN-SUFFIX,ccb.com.cn
 DOMAIN-SUFFIX,bankcomm.com
 DOMAIN-SUFFIX,cmbchina.com
 DOMAIN-SUFFIX,cncb.com
 DOMAIN-SUFFIX,cebbank.com
-DOMAIN-SUFFIX,alipay.com
-DOMAIN-SUFFIX,alicdn.com
-DOMAIN-SUFFIX,taobao.com
-DOMAIN-SUFFIX,tmall.com
-DOMAIN-SUFFIX,jd.com
-DOMAIN-SUFFIX,qq.com
-DOMAIN-SUFFIX,weixin.qq.com
-DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,psbc.com
+DOMAIN-SUFFIX,psbc.com.cn
+DOMAIN-SUFFIX,gov.cn
 DOMAIN-SUFFIX,12306.cn
