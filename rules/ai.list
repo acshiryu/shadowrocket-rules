@@ -1,0 +1,11 @@
+# AI services routed through proxy
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,gemini.google.com
+DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,deepmind.google
