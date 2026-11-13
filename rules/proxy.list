@@ -1,4 +1,6 @@
-# Selected global services
+# Selected overseas services, keep this narrow.
+# Financial services are intentionally NOT forced here: compliance, location,
+# and risk-control checks may depend on the service and the user's situation.
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
@@ -9,6 +11,4 @@ DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,youtu.be
 DOMAIN-SUFFIX,googlevideo.com
 DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,x.com
-DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,reddit.com
