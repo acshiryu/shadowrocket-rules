@@ -1,0 +1,12 @@
+# Overseas financial apps routed through HK proxy group.
+# DTCPay
+DOMAIN-SUFFIX,dtcpay.com
+DOMAIN-SUFFIX,dtcpayment.net
+# Bitget - official REST and WebSocket APIs are subdomains of bitget.com.
+DOMAIN-SUFFIX,bitget.com
+# MEXC - official canonical and regional domains; API is api.mexc.com.
+DOMAIN-SUFFIX,mexc.com
+DOMAIN-SUFFIX,mexc.co
+DOMAIN-SUFFIX,mexc.fm
+DOMAIN-SUFFIX,mexc.io
+DOMAIN-SUFFIX,mexc.exchange
