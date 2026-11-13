@@ -25,5 +25,8 @@ DOMAIN-SUFFIX,cmbc.com.cn
 DOMAIN-SUFFIX,spdb.com.cn
 DOMAIN-SUFFIX,pingan.com
 DOMAIN-SUFFIX,cib.com.cn
-# This file is DIRECT; do not add international financial services here
-# unless local direct connectivity is intended and confirmed.
+# Charles Schwab: direct connection (no proxy).
+DOMAIN-SUFFIX,schwab.com
+
+# This file is DIRECT; add other international financial services only
+# when direct connectivity is intended and confirmed.
