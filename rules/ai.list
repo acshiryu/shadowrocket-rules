@@ -10,3 +10,8 @@ DOMAIN,gemini.google.com
 DOMAIN-SUFFIX,ai.google.dev
 DOMAIN-SUFFIX,grok.com
 DOMAIN-SUFFIX,x.ai
+# Microsoft AI exceptions must precede microsoft.list DIRECT
+DOMAIN,copilot.microsoft.com
+DOMAIN,copilot.cloud.microsoft
+DOMAIN,designer.microsoft.com
+DOMAIN-SUFFIX,githubcopilot.com
