@@ -1,0 +1,3 @@
+# Optional ad/tracker blocking rules
+# This list is intentionally empty in the initial version.
+# Add verified DOMAIN or DOMAIN-SUFFIX entries, then explicitly enable the RULE-SET in shadowrocket.conf.
