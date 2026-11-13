@@ -14,13 +14,14 @@ Shadowrocket：配置 → 右上角 + → 粘贴 URL → 下载 → 选中配置
 
 1. 本地及私有网段直连
 2. `rules/direct.list`：国内银行和政务直连
-3. `rules/finance.list`：支付、证券及其他金融服务直连优先保护
-4. [Johnshall 去广告](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_ad_only.conf)：广告域名拒绝访问（REJECT）
-5. `rules/ai.list`：AI 服务代理
-6. `rules/apple.list`：Apple 核心服务直连
-7. `rules/microsoft.list`：Microsoft 日常服务直连
-8. `rules/proxy.list`：其他指定代理服务
-9. 继承的 Johnshall `lazy.conf`：更多国内外、Apple、流媒体等分流及最终兜底
+3. `rules/finance.list`：支付、证券及国内直连金融服务保护
+4. `rules/finance-overseas.list`：Ethena、Plasma、ether.fi 等指定海外金融服务代理
+5. [Johnshall 去广告](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_ad_only.conf)：广告域名拒绝访问（REJECT）
+6. `rules/ai.list`：AI 服务代理
+7. `rules/apple.list`：Apple 核心服务直连
+8. `rules/microsoft.list`：Microsoft 日常服务直连
+9. `rules/proxy.list`：其他指定代理服务
+10. 继承的 Johnshall `lazy.conf`：更多国内外、Apple、流媒体等分流及最终兜底
 
 Shadowrocket 官方说明：当前配置优先级高于 `include` 的配置。个人规则中**没有额外 FINAL**，以便继续使用上游兜底。
 
@@ -28,7 +29,8 @@ Shadowrocket 官方说明：当前配置优先级高于 `include` 的配置。�
 
 - `shadowrocket.conf`：主入口，继承上游并添加覆盖规则
 - `rules/direct.list`：银行/政务直连例外
-- `rules/finance.list`：金融、证券与支付域名保护白名单（优先于广告拦截）
+- `rules/finance.list`：国内银行、支付、证券及嘉信直连白名单
+- `rules/finance-overseas.list`：指定海外金融 App 代理规则（Ethena、Plasma、ether.fi）
 - `rules/ai.list`：AI 代理例外（包括 Microsoft Copilot）
 - `rules/apple.list`：Apple 服务独立直连规则
 - `rules/microsoft.list`：Microsoft 服务独立直连规则
