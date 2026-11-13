@@ -1,0 +1,9 @@
+# Overseas financial apps - explicitly routed through PROXY.
+# Keep this list limited to confirmed first-party service domains.
+# Ethena
+DOMAIN-SUFFIX,ethena.fi
+# Plasma / Plasma One
+DOMAIN-SUFFIX,plasma.org
+DOMAIN-SUFFIX,plasma.network
+# ether.fi
+DOMAIN-SUFFIX,ether.fi
