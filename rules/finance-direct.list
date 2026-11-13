@@ -2,3 +2,6 @@
 # Keep this separate from domestic finance and overseas proxy rules.
 # Charles Schwab
 DOMAIN-SUFFIX,schwab.com
+# Schwab in-app Glance cobrowsing / support service
+DOMAIN-SUFFIX,glance.net
+DOMAIN-SUFFIX,glancecdn.net
