@@ -1,0 +1,4 @@
+# Overseas financial services that should connect DIRECT.
+# Keep this separate from domestic finance and overseas proxy rules.
+# Charles Schwab
+DOMAIN-SUFFIX,schwab.com
