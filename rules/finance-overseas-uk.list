@@ -1,0 +1,19 @@
+# Overseas financial apps routed through UK proxy group.
+# Ethena
+DOMAIN-SUFFIX,ethena.fi
+# Plasma / Plasma One
+DOMAIN-SUFFIX,plasma.org
+DOMAIN-SUFFIX,plasma.to
+DOMAIN-SUFFIX,plasma-one.tech
+DOMAIN-SUFFIX,plasmascan.to
+# ether.fi
+DOMAIN-SUFFIX,ether.fi
+DOMAIN-SUFFIX,etherfi.gitbook.io
+DOMAIN-SUFFIX,etherfi.onelink.me
+# LemFi
+DOMAIN-SUFFIX,lemfi.com
+# Maya / former PayMaya / Maya Bank
+DOMAIN-SUFFIX,maya.ph
+DOMAIN-SUFFIX,mayabank.ph
+DOMAIN-SUFFIX,paymaya.com
+DOMAIN-SUFFIX,voyagerinnovation.com
