@@ -1,0 +1,29 @@
+# Financial-service compatibility overrides. Match before ad blocking.
+# Only official service domains are whitelisted; third-party SDK domains
+# are intentionally not blanket-whitelisted.
+# China payment rails
+DOMAIN-SUFFIX,alipay.com
+DOMAIN-SUFFIX,alipayobjects.com
+DOMAIN-SUFFIX,tenpay.com
+DOMAIN-SUFFIX,wechatpay.cn
+DOMAIN-SUFFIX,unionpay.com
+DOMAIN-SUFFIX,95516.com
+DOMAIN-SUFFIX,chinaums.com
+DOMAIN-SUFFIX,cloudquickpass.com
+# China brokers and investment platforms
+DOMAIN-SUFFIX,chinastock.com.cn
+DOMAIN-SUFFIX,gtja.com
+DOMAIN-SUFFIX,htsc.com.cn
+DOMAIN-SUFFIX,essence.com.cn
+DOMAIN-SUFFIX,cs.ecitic.com
+DOMAIN-SUFFIX,stock.pingan.com
+DOMAIN-SUFFIX,eastmoney.com
+DOMAIN-SUFFIX,1234567.com.cn
+# Other domestic banking services
+DOMAIN-SUFFIX,citicbank.com
+DOMAIN-SUFFIX,cmbc.com.cn
+DOMAIN-SUFFIX,spdb.com.cn
+DOMAIN-SUFFIX,pingan.com
+DOMAIN-SUFFIX,cib.com.cn
+# This file is DIRECT; do not add international financial services here
+# unless local direct connectivity is intended and confirmed.
