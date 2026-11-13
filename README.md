@@ -16,13 +16,14 @@ Shadowrocket：配置 → 右上角 + → 粘贴 URL → 下载 → 选中配置
 2. `rules/direct.list`：国内银行和政务直连
 3. `rules/finance-domestic.list`：国内银行、支付、证券直连
 4. `rules/finance-direct.list`：海外金融直连（目前为嘉信 Schwab）
-5. `rules/finance-overseas.list`：海外金融代理（目前为 Ethena、Plasma、ether.fi）
-6. [Johnshall 去广告](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_ad_only.conf)：广告域名拒绝访问（REJECT）
-7. `rules/ai.list`：AI 服务代理
-8. `rules/apple.list`：Apple 核心服务直连
-9. `rules/microsoft.list`：Microsoft 日常服务直连
-10. `rules/proxy.list`：其他指定代理服务
-11. 继承的 Johnshall `lazy.conf`：更多国内外、Apple、流媒体等分流及最终兜底
+5. `rules/finance-overseas-uk.list`：英国出口（Ethena、Plasma One、ether.fi、LemFi、Maya）
+6. `rules/finance-overseas-hk.list`：香港出口（DTCPay、Bitget、MEXC）
+7. [Johnshall 去广告](https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/sr_ad_only.conf)：广告域名拒绝访问（REJECT）
+8. `rules/ai.list`：AI 服务代理
+9. `rules/apple.list`：Apple 核心服务直连
+10. `rules/microsoft.list`：Microsoft 日常服务直连
+11. `rules/proxy.list`：其他指定代理服务
+12. 继承的 Johnshall `lazy.conf`：更多国内外、Apple、流媒体等分流及最终兜底
 
 Shadowrocket 官方说明：当前配置优先级高于 `include` 的配置。个人规则中**没有额外 FINAL**，以便继续使用上游兜底。
 
@@ -32,7 +33,8 @@ Shadowrocket 官方说明：当前配置优先级高于 `include` 的配置。�
 - `rules/direct.list`：银行/政务直连例外
 - `rules/finance-domestic.list`：国内银行、支付、证券直连
 - `rules/finance-direct.list`：海外金融直连（目前为嘉信 Schwab）
-- `rules/finance-overseas.list`：海外金融代理（目前为 Ethena、Plasma、ether.fi）
+- `rules/finance-overseas-uk.list`：英国出口（Ethena、Plasma One、ether.fi、LemFi、Maya）
+- `rules/finance-overseas-hk.list`：香港出口（DTCPay、Bitget、MEXC）
 - `rules/ai.list`：AI 代理例外（包括 Microsoft Copilot）
 - `rules/apple.list`：Apple 服务独立直连规则
 - `rules/microsoft.list`：Microsoft 服务独立直连规则
@@ -42,7 +44,7 @@ Shadowrocket 官方说明：当前配置优先级高于 `include` 的配置。�
 
 ## 金融服务三类分流
 
-金融服务明确分为三组：国内金融直连、海外金融直连、海外金融代理。主配置按这三份列表分别匹配，且都放在广告拦截之前。新增金融平台时，先确认其应属于哪一组，再把官方域名加入对应列表；不要把同一域名重复放入不同策略组。
+金融服务按出口分为四组：国内金融直连、海外金融直连、海外金融英国出口、海外金融香港出口。UK/HK 是主配置中的独立 url-test 策略组，按节点名称关键词筛选英国或香港节点；请确保节点订阅中的节点名称能被关键词匹配。所有金融规则均放在广告拦截之前。新增平台时先确认所需出口，再加入对应列表。
 
 ## Apple / Microsoft 策略
 
