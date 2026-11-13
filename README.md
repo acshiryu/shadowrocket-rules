@@ -1,43 +1,45 @@
-# Shadowrocket 分流规则
+# Shadowrocket 分流：懒人规则 + 个人覆盖
 
-个人维护的 Shadowrocket 分流规则仓库。
+本项目通过 Shadowrocket 原生 `[General] include` 继承 [Johnshall 懒人规则](https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever)，并将少量个人规则置于上游配置之前。**不是复制上游文件，也不提供节点。**
 
-## 分流策略
-
-- 国内常用网站、银行服务、局域网：`DIRECT`
-- AI 服务及指定海外网站：`PROXY`
-- 其他中国大陆 IP：`DIRECT`
-- 其余流量：`PROXY`
-- 广告拦截单独维护，默认不启用，以免误拦截
-
-## 订阅配置
-
-在 Shadowrocket 的「配置」中通过 URL 导入：
+## 主配置
 
 ```text
 https://raw.githubusercontent.com/acshiryu/shadowrocket-rules/master/shadowrocket.conf
 ```
 
-导入后请选中该配置，并使用「配置」分流模式。此配置**不提供代理节点**；请先在 Shadowrocket 中添加可用的代理服务器，并确认 `PROXY` 策略使用可用节点。
+Shadowrocket：配置 → 右上角 + → 粘贴 URL → 下载 → 选中配置 → **使用配置/编译配置**；首页全局路由设为 **配置**。请预先添加可用代理节点。
 
-## 文件结构
+## 规则顺序
 
-| 文件 | 作用 |
-| --- | --- |
-| `shadowrocket.conf` | 主配置入口，按顺序引用远程规则 |
-| `rules/direct.list` | 指定直连域名 |
-| `rules/proxy.list` | 指定代理域名 |
-| `rules/ai.list` | 常用 AI 服务代理域名 |
-| `rules/reject.list` | 预留广告拦截列表（默认未启用） |
+1. 本地及私有网段直连
+2. `rules/direct.list`：指定国内银行、政务直连
+3. `rules/ai.list`：常用 AI 服务代理
+4. `rules/proxy.list`：指定海外服务代理
+5. 继承的 Johnshall `lazy.conf`：更多国内外、Apple、流媒体等分流及最终兜底
 
-## 注意事项
+Shadowrocket 官方说明：当前配置优先级高于 `include` 的配置。个人规则中**没有额外 FINAL**，以便继续使用上游兜底。
 
-1. `RULE-SET` 引用的规则会按主配置里的顺序匹配，命中后不再继续检查。
-2. 远程规则更新依赖 Shadowrocket 对配置及规则集的刷新/缓存机制。
-3. 域名列表只是起始版本，不保证覆盖所有子域名或银行 App 的第三方依赖。
-4. 如需要启用广告拦截，可在主配置的 `[Rule]` 段加入 `RULE-SET,https://raw.githubusercontent.com/acshiryu/shadowrocket-rules/master/rules/reject.list,REJECT`，并放在直连和代理规则之前；请先检查拦截列表。
-5. 不要将节点凭据、订阅 Token 或个人信息提交到公开仓库。
+## 文件
 
-## 维护
+- `shadowrocket.conf`：主入口，继承上游并添加覆盖规则
+- `rules/direct.list`：国内金融/政务直连例外
+- `rules/ai.list`：AI 代理例外
+- `rules/proxy.list`：部分海外站点代理例外
+- `rules/reject.list`：可选个人广告拦截，**默认不启用**
 
-规则采用 Shadowrocket 常用的 `DOMAIN-SUFFIX`、`DOMAIN`、`IP-CIDR` 等匹配类型。欢迎按需修改并测试。
+## 重要提醒
+
+- `include` 与远程 `RULE-SET` 的实际加载、缓存、优先级，请在 Shadowrocket 设备上通过「编译配置」「测试规则」验证；仓库端检查不等于设备端测试。
+- 上游会变化；本仓库引用其在线配置，更新时须在客户端更新/重新编译配置。GitHub 更改不会自动即时生效。
+- 不要将节点密钥、订阅 Token、真实姓名、账户信息提交到公开仓库。
+- **金融类服务没有默认强制代理**。海外银行/券商/交易所可能要求特定网络位置；按其规则使用稳定、合规的连接，不建议频繁切换出口 IP。
+- DNS、MITM、重写等原则上交由上游处理，避免两套配置冲突；广告过滤实际效果取决于当前上游配置，不保证已经开启。
+- 原先的 `direct.list` / `proxy.list` 已缩小范围，避免过度强制匹配造成冲突。
+
+## 上游
+
+- https://johnshall.github.io/Shadowrocket-ADBlock-Rules-Forever/lazy.conf
+- https://github.com/Johnshall/Shadowrocket-ADBlock-Rules-Forever
+
+本项目与上游无隶属关系。
