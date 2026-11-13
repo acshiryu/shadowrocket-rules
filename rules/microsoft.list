@@ -1,0 +1,22 @@
+# Microsoft productivity, accounts, Windows and Office: DIRECT.
+# AI exceptions in ai.list are matched earlier.
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,microsoftonline.com
+DOMAIN-SUFFIX,microsoft365.com
+DOMAIN-SUFFIX,office.com
+DOMAIN-SUFFIX,office365.com
+DOMAIN-SUFFIX,office.net
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,live.com
+DOMAIN-SUFFIX,live.net
+DOMAIN-SUFFIX,outlook.com
+DOMAIN-SUFFIX,outlook.cn
+DOMAIN-SUFFIX,hotmail.com
+DOMAIN-SUFFIX,windows.com
+DOMAIN-SUFFIX,windowsupdate.com
+DOMAIN-SUFFIX,msftconnecttest.com
+DOMAIN-SUFFIX,msftncsi.com
+DOMAIN-SUFFIX,msauth.net
+DOMAIN-SUFFIX,msftauth.net
+DOMAIN-SUFFIX,azureedge.net
